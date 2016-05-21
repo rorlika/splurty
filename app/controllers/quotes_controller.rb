@@ -17,7 +17,13 @@ class QuotesController < ApplicationController
     private
 
     def quote_params
-    	params.require(:quote).permit(:saying,:author)
-        params.inspect
+    	quote_params = params.require(:quote).permit(:saying,:author)
+        
+        quote_params[:author] = quote_params[:author].capitalize
+        
+        quote_params[:saying] = quote_params[:saying].titleize
+
+        quote_params
+
     end
 end
