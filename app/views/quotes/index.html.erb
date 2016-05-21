@@ -1,0 +1,15 @@
+<br />
+<br />
+
+<table>
+<tr>
+    <th>Quotes</th>
+    <th>author</th>
+  </tr>
+<% @quote.each do |i|  %>
+  <tr>
+    <td><%= i.saying %></td>
+    <td><%= i.author %></td>
+  </tr>
+<% end %>
+</table>
